@@ -98,6 +98,94 @@ async function seedDatabase() {
       imageUrl: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80"
     });
 
+    await storage.createArticle({
+      titleEn: "The Benefits of Rose Water",
+      titleAr: "فوائد ماء الورد",
+      summaryEn: "A natural toner that has been used for centuries.",
+      summaryAr: "تونر طبيعي يستخدم منذ قرون.",
+      contentEn: "Rose water helps maintain the skin's pH balance and controls excess oil...",
+      contentAr: "يساعد ماء الورد في الحفاظ على توازن درجة حموضة البشرة ويتحكم في الزيوت الزائدة...",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Sunscreen: Your Best Anti-Aging Tool",
+      titleAr: "واقي الشمس: أفضل أداة لمكافحة الشيخوخة",
+      summaryEn: "Protecting your skin from UV rays is non-negotiable.",
+      summaryAr: "حماية بشرتك من الأشعة فوق البنفسجية أمر غير قابل للتفاوض.",
+      contentEn: "90% of skin aging is caused by the sun. Here is how to choose the right one...",
+      contentAr: "90% من شيخوخة الجلد سببها الشمس. إليك كيفية اختيار النوع المناسب...",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1556229162-5c63ed9c4ffb?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Nighttime Skincare Essentials",
+      titleAr: "أساسيات العناية بالبشرة ليلاً",
+      summaryEn: "How to maximize your skin's repair phase while you sleep.",
+      summaryAr: "كيفية تعظيم مرحلة إصلاح بشرتك أثناء النوم.",
+      contentEn: "Your skin regenerates at night. Using retinoids and thick creams can help...",
+      contentAr: "تتجدد بشرتك في الليل. استخدام الرتينويدات والكريمات السميكة يمكن أن يساعد...",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1552046122-03184de85e08?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Natural Oils for Healthy Hair",
+      titleAr: "الزيوت الطبيعية لشعر صحي",
+      summaryEn: "From Argan to Coconut, find the best oil for your hair type.",
+      summaryAr: "من الأرغان إلى جوز الهند، ابحثي عن أفضل زيت لنوع شعرك.",
+      contentEn: "Oiling your hair can provide deep nourishment and prevent breakage...",
+      contentAr: "تزييت شعرك يمكن أن يوفر تغذية عميقة ويمنع التقصف...",
+      category: "haircare",
+      imageUrl: "https://images.unsplash.com/photo-1626015155682-198129e97911?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "The Importance of Scalp Health",
+      titleAr: "أهمية صحة فروة الرأس",
+      summaryEn: "Healthy hair starts at the root.",
+      summaryAr: "الشعر الصحي يبدأ من الجذور.",
+      contentEn: "Scalp exfoliation and massage can stimulate growth and reduce dandruff...",
+      contentAr: "تقشير فروة الرأس وتدليكها يمكن أن يحفز النمو ويقلل من القشرة...",
+      category: "haircare",
+      imageUrl: "https://images.unsplash.com/photo-1522337360788-8b13df772ad5?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Clean Beauty: What You Need to Know",
+      titleAr: "الجمال النظيف: ما تحتاجين لمعرفته",
+      summaryEn: "A guide to understanding safe ingredients in your products.",
+      summaryAr: "دليل لفهم المكونات الآمنة في منتجاتك.",
+      contentEn: "Avoid parabens and sulfates. Look for natural alternatives...",
+      contentAr: "تجنبي البارابين والكبريتات. ابحثي عن بدائل طبيعية...",
+      category: "lifestyle",
+      imageUrl: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Mindful Beauty: Stress and Your Skin",
+      titleAr: "الجمال الواعي: التوتر وبشرتك",
+      summaryEn: "How your mental state affects your physical appearance.",
+      summaryAr: "كيف تؤثر حالتك النفسية على مظهرك الجسدي.",
+      contentEn: "Cortisol can break down collagen. Learn how to de-stress for better skin...",
+      contentAr: "الكورتيزول يمكن أن يحطم الكولاجين. تعلمي كيفية تخفيف التوتر لبشرة أفضل...",
+      category: "lifestyle",
+      imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "The Power of Facial Massage",
+      titleAr: "قوة تدليك الوجه",
+      summaryEn: "Natural lifting and lymphatic drainage techniques.",
+      summaryAr: "تقنيات الشد الطبيعي والتصريف اللمفاوي.",
+      contentEn: "Using a Gua Sha or your fingers can help define your features...",
+      contentAr: "استخدام الجواشا أو أصابعك يمكن أن يساعد في تحديد ملامحك...",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1591343395582-99bf4ebc046c?auto=format&fit=crop&q=80"
+    });
+
     // 3. Routines
     await storage.createRoutine({
       titleEn: "Morning Glow Routine",
