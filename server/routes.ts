@@ -219,6 +219,50 @@ async function seedDatabase() {
       imageUrl: "https://images.unsplash.com/photo-1527799822367-a233b70b516e?auto=format&fit=crop&q=80"
     });
 
+    await storage.createArticle({
+      titleEn: "Natural Homemade Soap",
+      titleAr: "الصابون الطبيعي المنزلي – نظافة آمنة للبشرة",
+      summaryEn: "A safe alternative to commercial soaps containing harsh chemicals.",
+      summaryAr: "بديل آمن للصابون التجاري الذي يحتوي على مواد كيميائية قاسية.",
+      contentEn: "Homemade natural soap is one of the best alternatives to commercial soap. It gently cleanses the skin and preserves its natural oils, with added beneficial ingredients like herbs and essential oils.",
+      contentAr: "يُعد الصابون الطبيعي المصنوع في المنزل من أفضل البدائل للصابون التجاري الذي يحتوي غالبًا على مواد كيميائية تسبب الجفاف والتهيج. الصابون الطبيعي ينظف البشرة بلطف ويحافظ على الزيوت الطبيعية فيها، كما يمكن إضافة مكونات مفيدة مثل الأعشاب والزيوت العطرية.",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Natural Lip Balm",
+      titleAr: "بلسم الشفاه الطبيعي – حماية وترطيب دائم",
+      summaryEn: "Deep hydration and protection for soft, smooth lips.",
+      summaryAr: "ترطيب عميق وحماية لشفاه ناعمة وسلسة.",
+      contentEn: "Lips are exposed to dryness and cracking due to weather and unsuitable products. Natural lip balm provides deep hydration and restores softness without synthetic materials.",
+      contentAr: "تتعرض الشفاه للجفاف والتشقق بسبب الطقس واستخدام مستحضرات غير مناسبة. بلسم الشفاه الطبيعي يمنح ترطيبًا عميقًا ويعيد للشفاه نعومتها دون مواد صناعية.",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1617350410111-f9b2d878701e?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Natural Oils for Skin and Hair",
+      titleAr: "الزيوت الطبيعية للعناية بالبشرة والشعر",
+      summaryEn: "Vitamins and fatty acids for a healthy, radiant look.",
+      summaryAr: "فيتامينات وأحماض دهنية لمظهر صحي ومشرق.",
+      contentEn: "Natural oils have been used since ancient times for beauty care, containing beneficial vitamins and fatty acids. Regular use helps moisturize the skin and strengthen the hair.",
+      contentAr: "الزيوت الطبيعية تُستخدم منذ القدم في العناية بالجمال، لما تحتويه من فيتامينات وأحماض دهنية مفيدة. الاستخدام المنتظم للزيوت يساعد على ترطيب البشرة وتقوية الشعر ومنحه لمعانًا صحيًا.",
+      category: "haircare",
+      imageUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Homemade Natural Deodorant",
+      titleAr: "مزيل عرق طبيعي منزلي – انتعاش بلا مواد ضارة",
+      summaryEn: "Stay fresh without irritating chemicals.",
+      summaryAr: "حافظي على انتعاشك بدون مواد كيميائية مهيجة.",
+      contentEn: "Most commercial deodorants contain substances that may cause skin irritation. A homemade natural alternative helps control odor and leaves a fresh feeling without harm.",
+      contentAr: "تحتوي معظم مزيلات العرق التجارية على مواد قد تسبب تهيج الجلد. المزيل الطبيعي المنزلي يساعد على التحكم في الرائحة ويترك إحساسًا بالانتعاش دون ضرر.",
+      category: "lifestyle",
+      imageUrl: "https://images.unsplash.com/photo-1556228578-8c7c0f44bb0b?auto=format&fit=crop&q=80"
+    });
+
     // 3. Routines
     await storage.createRoutine({
       titleEn: "Morning Glow Routine",
