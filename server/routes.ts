@@ -186,6 +186,39 @@ async function seedDatabase() {
       imageUrl: "https://images.unsplash.com/photo-1591343395582-99bf4ebc046c?auto=format&fit=crop&q=80"
     });
 
+    await storage.createArticle({
+      titleEn: "Natural Homemade Beauty Products",
+      titleAr: "منتجات التجميل الطبيعية المصنوعة في المنزل – جمال آمن وصحي",
+      summaryEn: "A guide to safe and healthy DIY beauty products.",
+      summaryAr: "دليل لمنتجات تجميل منزلية الصنع آمنة وصحية.",
+      contentEn: "In recent years, awareness has increased about the dangers of chemicals in commercial cosmetics, such as synthetic fragrances and parabens. Homemade products are safe, effective, and low-cost.",
+      contentAr: "في السنوات الأخيرة زاد الوعي بأضرار المواد الكيميائية الموجودة في كثير من مستحضرات التجميل التجارية، مثل العطور الصناعية والبارابين. لذلك اتجه الكثيرون إلى استخدام منتجات التجميل المصنوعة في المنزل، لما تتميز به من أمان وفعالية وتكلفة منخفضة.",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1601612620450-5eecebbd03ae?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Natural Face Masks from Your Kitchen",
+      titleAr: "أقنعة الوجه الطبيعية – عناية فعالة من مطبخك",
+      summaryEn: "Treat your skin problems with ingredients you already have.",
+      summaryAr: "عالجي مشاكل بشرتك بمكونات موجودة بالفعل في مطبخك.",
+      contentEn: "Natural face masks are one of the most common ways to care for your skin, treating issues like dryness, dullness, and acne. Consistency gives your skin a natural glow.",
+      contentAr: "تُعد أقنعة الوجه الطبيعية من أكثر طرق العناية بالبشرة شيوعًا، لأنها تعالج مشاكل عديدة مثل الجفاف، البهتان، والحبوب. الاستمرار في استخدامها يمنح البشرة إشراقًا ونضارة طبيعية.",
+      category: "skincare",
+      imageUrl: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80"
+    });
+
+    await storage.createArticle({
+      titleEn: "Hair Care with Natural Recipes",
+      titleAr: "العناية بالشعر باستخدام وصفات طبيعية منزلية",
+      summaryEn: "Protect your hair from daily damage with simple natural solutions.",
+      summaryAr: "احمي شعرك من الأضرار اليومية بحلول طبيعية بسيطة.",
+      contentEn: "Hair is exposed daily to damaging factors like heat and pollution. Natural recipes are an ideal solution to strengthen hair and stimulate growth without damage.",
+      contentAr: "يتعرض الشعر يوميًا لعوامل تضر به مثل الحرارة، الصبغات، والتلوث. لذلك تُعد الوصفات الطبيعية حلًا مثاليًا لتقوية الشعر وتحفيز نموه دون إتلافه.",
+      category: "haircare",
+      imageUrl: "https://images.unsplash.com/photo-1527799822367-a233b70b516e?auto=format&fit=crop&q=80"
+    });
+
     // 3. Routines
     await storage.createRoutine({
       titleEn: "Morning Glow Routine",
