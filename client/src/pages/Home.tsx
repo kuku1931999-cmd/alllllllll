@@ -16,7 +16,7 @@ export default function Home() {
 
   // Placeholder images for when no data/image is available
   // Using Unsplash source URLs for demonstration as requested
-  const heroImage = "https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=2000&auto=format&fit=crop";
+  const heroImage = "https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=2000&auto=format&fit=crop";
   
   return (
     <div className="min-h-screen">
@@ -199,7 +199,7 @@ export default function Home() {
                 key={article.id}
                 title={language === 'en' ? article.titleEn : article.titleAr}
                 description={language === 'en' ? article.summaryEn : article.summaryAr}
-                image={article.imageUrl || `https://images.unsplash.com/photo-1571781926291-280553facd7d?w=800&auto=format&fit=crop&q=60`}
+                image={article.imageUrl || `https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&auto=format&fit=crop&q=60`}
                 href={`/articles/${article.id}`}
                 delay={i * 0.1}
               />
@@ -245,9 +245,9 @@ export default function Home() {
             {/* Daily Routine Card */}
             <Link href="/routines" className="group">
               <div className="relative h-80 rounded-2xl overflow-hidden cursor-pointer">
-                {/* woman washing face */}
+                {/* organic skincare ingredients */}
                 <img 
-                  src="https://pixabay.com/get/g7f05b1bfdcbeefe27c99a65defc7a3cb3cefa825d36b0fa98d211ceda2672ea964faab218d89970965ab94f5e2da26811e0cad5613f4ca15d70c922c6fbf58be_1280.jpg" 
+                  src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop&q=60" 
                   alt="Routines" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -285,9 +285,9 @@ export default function Home() {
             {/* Founder Card */}
             <Link href="/about" className="group md:col-span-2 lg:col-span-1">
               <div className="relative h-80 rounded-2xl overflow-hidden cursor-pointer">
-                {/* elegant woman portrait */}
+                {/* natural herbs and oils */}
                 <img 
-                  src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&auto=format&fit=crop&q=60" 
+                  src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&auto=format&fit=crop&q=60" 
                   alt="About" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
