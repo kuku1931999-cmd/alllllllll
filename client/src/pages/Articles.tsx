@@ -35,7 +35,7 @@ export default function Articles() {
                 key={article.id}
                 title={language === 'en' ? article.titleEn : article.titleAr}
                 description={language === 'en' ? article.summaryEn : article.summaryAr}
-                image={article.imageUrl || `https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=800&q=80`}
+                image={article.imageUrl || `https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80`}
                 href={`/articles/${article.id}`}
                 delay={i * 0.05}
               />

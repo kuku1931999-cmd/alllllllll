@@ -44,7 +44,7 @@ export default function ArticleDetail() {
       <div className="relative h-[60vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
         <img 
-          src={article.imageUrl || "https://images.unsplash.com/photo-1571781926291-280553facd7d?w=1600&auto=format&fit=crop"} 
+          src={article.imageUrl || "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1600&auto=format&fit=crop"} 
           alt={language === 'en' ? article.titleEn : article.titleAr}
           className="w-full h-full object-cover"
         />

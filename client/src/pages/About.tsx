@@ -24,7 +24,7 @@ export default function About() {
     titleAr: "تعرف على المؤسس",
     contentEn: "Founded with a passion for holistic wellness, our vision stems from the belief that beauty starts from within. After years of exploring natural ingredients and sustainable practices, I created this platform to share the secrets of timeless elegance.",
     contentAr: "تأسست بشغف للعافية الشاملة، رؤيتنا تنبع من الإيمان بأن الجمال يبدأ من الداخل. بعد سنوات من استكشاف المكونات الطبيعية والممارسات المستدامة، أنشأت هذه المنصة لمشاركة أسرار الأناقة الخالدة.",
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1000&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=1000&auto=format&fit=crop"
   };
 
   return (
