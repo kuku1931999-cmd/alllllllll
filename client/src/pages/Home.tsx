@@ -115,7 +115,7 @@ export default function Home() {
       )}
 
       {/* Health & Beauty Articles */}
-      <section className="py-24 bg-purple-50/50">
+      <section id="articles-section" className="py-24 bg-purple-50/50 scroll-mt-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -126,8 +126,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition-all"
+            >
               <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("Skincare Basics", "أساسيات العناية بالبشرة")}
               </h3>
@@ -137,9 +140,12 @@ export default function Home() {
                   "الاستمرارية هي أساس أي روتين جيد. تعرفي على الخطوات الأساسية للحفاظ على صحة بشرتك وتوهجها كل يوم."
                 )}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition-all"
+            >
               <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("Hair Health Secrets", "أسرار صحة الشعر")}
               </h3>
@@ -149,9 +155,12 @@ export default function Home() {
                   "اكتشفي تأثير التغذية والزيوت الطبيعية على قوة الشعر. تغييرات بسيطة يمكن أن تحدث فرقاً كبيراً في الكثافة واللمعان."
                 )}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition-all"
+            >
               <h3 className="text-xl font-bold mb-4 text-gray-800">
                 {t("Mindful Wellness", "العافية الواعية")}
               </h3>
@@ -161,7 +170,7 @@ export default function Home() {
                   "الجمال يبدأ من الداخل. فهم الارتباط بين الصحة النفسية والمظهر الخارجي هو مفتاح الأناقة الحقيقية."
                 )}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
