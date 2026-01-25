@@ -13,11 +13,23 @@ export function Navigation() {
 
   const links = [
     { href: "/", label: t("Home", "الرئيسية") },
-    { href: "/articles", label: t("Articles", "المقالات") },
+    { href: "/#articles-section", label: t("Articles", "المقالات") },
     { href: "/routines", label: t("Routines", "الروتين اليومي") },
     { href: "/remedies", label: t("Remedies", "وصفات طبيعية") },
     { href: "/about", label: t("About", "من نحن") },
   ];
+
+  const handleLinkClick = (href: string) => {
+    setIsOpen(false);
+    if (href === "/#articles-section") {
+      if (location === "/") {
+        const element = document.getElementById("articles-section");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  };
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-purple-100">
@@ -37,6 +49,7 @@ export function Navigation() {
             <Link 
               key={link.href} 
               href={link.href}
+              onClick={() => handleLinkClick(link.href)}
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 location === link.href ? "text-primary font-semibold" : "text-gray-600"
               }`}
@@ -77,7 +90,7 @@ export function Navigation() {
                   <Link 
                     key={link.href} 
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => handleLinkClick(link.href)}
                     className={`text-lg font-medium transition-colors hover:text-primary ${
                       location === link.href ? "text-primary" : "text-gray-600"
                     }`}
