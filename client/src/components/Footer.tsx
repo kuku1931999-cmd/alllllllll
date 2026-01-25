@@ -1,9 +1,13 @@
 import { useLanguage } from "@/hooks/use-language";
-import { Sparkles, Instagram, Facebook, Twitter, Heart } from "lucide-react";
+import { Sparkles, Instagram, Facebook, Heart, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 
 export function Footer() {
   const { t } = useLanguage();
+
+  const whatsappNumber = "+201143539189";
+  const facebookUrl = "https://www.facebook.com/share/1TnNbvsXdu/";
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace("+", "")}`;
 
   return (
     <footer className="bg-secondary/50 pt-16 pb-8 border-t border-purple-100">
@@ -41,7 +45,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-gray-800 mb-6">{t("Support", "الدعم")}</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{t("Contact Us", "اتصل بنا")}</a></li>
+              <li><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">{t("Contact Us", "اتصل بنا")}</a></li>
               <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{t("Privacy Policy", "سياسة الخصوصية")}</a></li>
               <li><a href="#" className="text-gray-500 hover:text-primary transition-colors">{t("Terms of Service", "شروط الاستخدام")}</a></li>
             </ul>
@@ -51,14 +55,32 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-gray-800 mb-6">{t("Connect", "تواصل معنا")}</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all">
-                <Instagram className="w-5 h-5" />
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all"
+                title="WhatsApp"
+                data-testid="link-whatsapp"
+              >
+                <MessageCircle className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all">
+              <a 
+                href={facebookUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all"
+                title="Facebook"
+                data-testid="link-facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary hover:shadow-md transition-all"
+                title="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
