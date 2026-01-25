@@ -21,8 +21,9 @@ export const articles = pgTable("articles", {
   summaryAr: text("summary_ar").notNull(),
   contentEn: text("content_en").notNull(), // Full HTML or markdown content
   contentAr: text("content_ar").notNull(),
-  category: text("category").notNull(), // 'skincare', 'haircare', 'makeup', 'lifestyle'
+  category: text("category").notNull(), // 'skincare', 'haircare', 'makeup', 'lifestyle', 'health', 'nutrition', 'mental'
   imageUrl: text("image_url"),
+  published: boolean("published").default(true),
 });
 
 export const routines = pgTable("routines", {
@@ -44,6 +45,8 @@ export const remedies = pgTable("remedies", {
   instructionsAr: text("instructions_ar").notNull(),
   benefitsEn: text("benefits_en").notNull(),
   benefitsAr: text("benefits_ar").notNull(),
+  notesEn: text("notes_en"),
+  notesAr: text("notes_ar"),
 });
 
 export const tips = pgTable("tips", {
@@ -51,6 +54,12 @@ export const tips = pgTable("tips", {
   contentEn: text("content_en").notNull(),
   contentAr: text("content_ar").notNull(),
   category: text("category").notNull(),
+});
+
+export const admins = pgTable("admins", {
+  id: serial("id").primaryKey(),
+  replitId: text("replit_id").notNull().unique(),
+  username: text("username").notNull(),
 });
 
 // Schemas
