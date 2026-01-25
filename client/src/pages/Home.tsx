@@ -114,6 +114,58 @@ export default function Home() {
         </div>
       )}
 
+      {/* Health & Beauty Articles */}
+      <section className="py-24 bg-purple-50/50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              {t("Health & Beauty Articles", "مقالات الصحة والجمال")}
+            </h2>
+            <p className="text-gray-500">
+              {t("Practical tips and expert advice for your wellness journey.", "نصائح عملية واستشارات الخبراء لرحلة العافية الخاصة بك.")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t("Skincare Basics", "أساسيات العناية بالبشرة")}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t(
+                  "Consistency is the foundation of any good routine. Learn the essential steps to keep your skin healthy and glowing every day.",
+                  "الاستمرارية هي أساس أي روتين جيد. تعرفي على الخطوات الأساسية للحفاظ على صحة بشرتك وتوهجها كل يوم."
+                )}
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t("Hair Health Secrets", "أسرار صحة الشعر")}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t(
+                  "Discover the impact of nutrition and natural oils on hair strength. Simple changes can make a big difference in volume and shine.",
+                  "اكتشفي تأثير التغذية والزيوت الطبيعية على قوة الشعر. تغييرات بسيطة يمكن أن تحدث فرقاً كبيراً في الكثافة واللمعان."
+                )}
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-purple-100">
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t("Mindful Wellness", "العافية الواعية")}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t(
+                  "Beauty begins from within. Understanding the link between mental health and physical appearance is key to true elegance.",
+                  "الجمال يبدأ من الداخل. فهم الارتباط بين الصحة النفسية والمظهر الخارجي هو مفتاح الأناقة الحقيقية."
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Articles */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
