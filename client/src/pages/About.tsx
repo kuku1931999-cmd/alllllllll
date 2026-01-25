@@ -97,11 +97,33 @@ export default function About() {
                   ? (founderSection?.titleEn || fallbackFounder.titleEn) 
                   : (founderSection?.titleAr || fallbackFounder.titleAr)}
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                {language === 'en' 
-                  ? (founderSection?.contentEn || fallbackFounder.contentEn) 
-                  : (founderSection?.contentAr || fallbackFounder.contentAr)}
-              </p>
+              <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
+                <p>
+                  {language === 'en' 
+                    ? (founderSection?.contentEn || fallbackFounder.contentEn) 
+                    : (founderSection?.contentAr || fallbackFounder.contentAr)}
+                </p>
+                <div className="p-6 bg-white/50 rounded-2xl border border-primary/10 backdrop-blur-sm">
+                  <p className="font-medium text-gray-900 mb-2">
+                    {t(
+                      "About the Project Owner:",
+                      "حول صاحبة المشروع:"
+                    )}
+                  </p>
+                  <p>
+                    {t(
+                      "Fatima Mohamed is a student at the University of Khartoum, Faculty of Medical Laboratories. She has extensive experience in this field and is also passionate about skincare and personal beauty care.",
+                      "فاطمة محمد طالبة بجامعة الخرطوم، كلية المختبرات الطبية. لديها خبرة واسعة في هذا المجال وهي أيضاً شغوفة بالعناية بالبشرة والجمال الشخصي."
+                    )}
+                  </p>
+                </div>
+                <p className="text-sm italic text-gray-500">
+                  {t(
+                    "This website was designed by Engineer Al-Tayeb Idris.",
+                    "تم تصميم هذا الموقع بواسطة المهندس الطيب إدريس."
+                  )}
+                </p>
+              </div>
               
               <div className="flex items-center gap-4">
                  <div className="h-px bg-gray-300 flex-grow max-w-[100px]" />
