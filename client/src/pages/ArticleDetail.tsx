@@ -17,6 +17,7 @@ export default function Articles() {
   const Arrow = language === "ar" ? ArrowLeft : ArrowRight;
 
   useEffect(() => {
+    setIsAdmin(true); // Forced for now as requested
     fetchArticles();
   }, []);
 

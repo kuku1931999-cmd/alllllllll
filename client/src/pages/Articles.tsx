@@ -8,7 +8,7 @@ export default function Articles() {
   const [newArt, setNewArt] = useState({ titleAr: "", descAr: "", image: "" });
 
   useEffect(() => {
-    setIsAdmin(localStorage.getItem("toma_admin") === "true");
+    setIsAdmin(true); // Forced for now as requested
     fetchArticles();
   }, []);
 
