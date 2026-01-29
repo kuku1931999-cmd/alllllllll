@@ -1,9 +1,9 @@
-import { supabase } from '/supabase.js';
+import { supabase } from "@/lib/supabase";
 
 export default function Home() {
   const { t, language } = useLanguage();
   const { data: articlesData } = useArticles();
-  const [localArticles, setLocalArticles] = useState([]);
+  const [localArticles, setLocalArticles] = useState<any[]>([]);
 
   const Arrow = language === "ar" ? ArrowLeft : ArrowRight;
   const heroImage =

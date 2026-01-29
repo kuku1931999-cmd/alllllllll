@@ -1,8 +1,8 @@
-import { supabase } from '/supabase.js';
+import { supabase } from "@/lib/supabase";
 
 export default function Articles() {
   const { t, language } = useLanguage();
-  const [localArticles, setLocalArticles] = useState([]);
+  const [localArticles, setLocalArticles] = useState<any[]>([]);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
 
