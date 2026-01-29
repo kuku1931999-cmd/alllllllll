@@ -1,0 +1,83 @@
+2026-01-29T17:38:20Z info: Deployment: 5b1ca651-8c8b-4a5f-bce8-0b9b3124337c
+2026-01-29T17:38:20Z info: Build: 8f0abef6-e2f0-46ec-b3eb-0dc0bfbe40ba
+2026-01-29T17:38:20Z info: Running Security Scan
+2026-01-29T17:38:42Z info: Security Scan Complete
+2026-01-29T17:38:42Z info: Connecting to builder
+2026-01-29T17:38:42Z info: Builder connected
+2026-01-29T17:38:42Z info: Installing packages
+2026-01-29T17:38:42Z info: Starting Build
+
+> toma-beauty-hub@1.0.0 build
+> vite build && tsx script/build.ts
+
+
+vite v7.3.0 building client environment for production...
+
+transforming...
+
+✓ 2118 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../dist/public/index.html                   2.17 kB │ gzip:   0.83 kB
+
+✓ built in 11.61s
+
+building client...
+
+vite v7.3.0 building client environment for production...
+
+transforming...
+
+✓ 2118 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../dist/public/index.html                   2.17 kB │ gzip:   0.83 kB
+
+../../dist/public/assets/index-CV_uHCdp.js   687.18 kB │ gzip: 207.23 kB
+
+building server...
+
+
+  dist/index.cjs  1.0mb ⚠️
+
+⚡ Done in 356ms
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.8.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.8.0
+npm notice To update run: npm install -g npm@11.8.0
+npm notice
+
+2026-01-29T17:39:12Z info: Pushing pid1 binary layer...
+2026-01-29T17:39:13Z info: Pushing Repl layer...
+2026-01-29T17:39:13Z info: Pushing hosting layer...
+2026-01-29T17:39:13Z info: Created hosting layer
+2026-01-29T17:39:14Z info: Created pid1 binary layer
+2026-01-29T17:39:29Z info: Created Repl layer
+2026-01-29T17:39:31Z info: Pushed image manifest
+2026-01-29T17:39:33Z info: Pushed soci index manifest
+2026-01-29T17:40:29Z info: Creating Autoscale service
+CRITICAL ERROR: DATABASE_URL is missing or empty in process.env.
+command finished with error [npm run start]: exit status 1
+Attempting fallback connection using individual PG environment variables...
+CRITICAL ERROR: DATABASE_URL is missing or empty in process.env.
+/home/runner/workspace/dist/index.cjs:80
+/home/runner/workspace/dist/index.cjs:80
+this.addIssue=n=>{this.issues=[...this.issues,n]},this.addIssues=(n=[])=>{this.issues=[...this.issues,...n]};let r=new.target.prototype;Object.setPrototypeOf?Object.setPrototypeOf(this,r):this.__proto__=r,this.name="ZodError",this.issues=e}format(e){let r=e||function(s){return s.message},n={_errors:[]},i=s=>{for(let a of s.issues)if(a.code==="invalid_union")a.unionErrors.map(i);else if(a.code==="invalid_return_type")i(a.returnTypeError);else if(a.code==="invalid_arguments")i(a.argumentsError);else if(a.path.length===0)n._errors.push(r(a));else{let o=n,l=0;for(;l<a.path.length;){let u=a.path[l];l===a.path.length-1?(o[u]=o[u]||{_errors:[]},o[u]._errors.push(r(a))):o[u]=o[u]||{_errors:[]},o=o[u],l++}}};return i(this),n}static assert(e){if(!(e instanceof t))throw new Error(`Not a ZodError: ${e}`)}toString(){return this.message}get message(){return JSON.stringify(this.issues,G.jsonStringifyReplacer,2)}get isEmpty(){return this.issues.length===0}flatten(e=r=>r.message){let r={},n=[];for(let ...
+        `;await r.execute(y`CREATE SCHEMA IF NOT EXISTS ${y.identifier(s)}`),await r.execute(a);let l=(await r.all(y`select id, hash, created_at from ${y.identifier(s)}.${y.identifier(i)} order by created_at desc limit 1`))[0];await r.transaction(async u=>{for await(let c of e)if(!l||Number(l.created_at)<c.folderMillis){for(let p of c.sql)await u.execute(y.raw(p));await u.execute(y`insert into ${y.identifier(s)}.${y.identifier(i)} ("hash", "created_at") values(${c.hash}, ${c.folderMillis})`)}})}escapeName(e){return`"${e}"`}escapeParam(e){return`$${e+1}`}escapeString(e){return`'${e.replace(/'/g,"''")}'`}buildWithCTE(e){if(!e?.length)return;let r=[y`with `];for(let[n,i]of e.entries())r.push(y`${y.identifier(i._.alias)} as (${i._.sql})`),n<e.length-1&&r.push(y`, `);return r.push(y` `),y.join(r)}buildDeleteQuery({table:e,where:r,returning:n,withList:i}){let s=this.buildWithCTE(i),a=n?y` returning ${this.buildSelection(n,{isSingleTable:!0})}`:void 0,o=r?y` where ${r}`:void 0;return y`${s}delete f...
+/home/runner/workspace/dist/index.cjs:80
+Attempting fallback connection using individual PG environment variables...
+> toma-beauty-hub@1.0.0 start
+this.addIssue=n=>{this.issues=[...this.issues,n]},this.addIssues=(n=[])=>{this.issues=[...this.issues,...n]};let r=new.target.prototype;Object.setPrototypeOf?Object.setPrototypeOf(this,r):this.__proto__=r,this.name="ZodError",this.issues=e}format(e){let r=e||function(s){return s.message},n={_errors:[]},i=s=>{for(let a of s.issues)if(a.code==="invalid_union")a.unionErrors.map(i);else if(a.code==="invalid_return_type")i(a.returnTypeError);else if(a.code==="invalid_arguments")i(a.argumentsError);else if(a.path.length===0)n._errors.push(r(a));else{let o=n,l=0;for(;l<a.path.length;){let u=a.path[l];l===a.path.length-1?(o[u]=o[u]||{_errors:[]},o[u]._errors.push(r(a))):o[u]=o[u]||{_errors:[]},o=o[u],l++}}};return i(this),n}static assert(e){if(!(e instanceof t))throw new Error(`Not a ZodError: ${e}`)}toString(){return this.message}get message(){return JSON.stringify(this.issues,G.jsonStringifyReplacer,2)}get isEmpty(){return this.issues.length===0}flatten(e=r=>r.message){let r={},n=[];for(let ...
+command finished with error [npm run start]: exit status 1
+> toma-beauty-hub@1.0.0 start
+> NODE_ENV=production node dist/index.cjs
+crash loop detected
+        `;await r.execute(y`CREATE SCHEMA IF NOT EXISTS ${y.identifier(s)}`),await r.execute(a);let l=(await r.all(y`select id, hash, created_at from ${y.identifier(s)}.${y.identifier(i)} order by created_at desc limit 1`))[0];await r.transaction(async u=>{for await(let c of e)if(!l||Number(l.created_at)<c.folderMillis){for(let p of c.sql)await u.execute(y.raw(p));await u.execute(y`insert into ${y.identifier(s)}.${y.identifier(i)} ("hash", "created_at") values(${c.hash}, ${c.folderMillis})`)}})}escapeName(e){return`"${e}"`}escapeParam(e){return`$${e+1}`}escapeString(e){return`'${e.replace(/'/g,"''")}'`}buildWithCTE(e){if(!e?.length)return;let r=[y`with `];for(let[n,i]of e.entries())r.push(y`${y.identifier(i._.alias)} as (${i._.sql})`),n<e.length-1&&r.push(y`, `);return r.push(y` `),y.join(r)}buildDeleteQuery({table:e,where:r,returning:n,withList:i}){let s=this.buildWithCTE(i),a=n?y` returning ${this.buildSelection(n,{isSingleTable:!0})}`:void 0,o=r?y` where ${r}`:void 0;return y`${s}delete f...
+2026-01-29T17:42:37Z error: The deployment is crash looping. This can happen if the run command fails or exits immediately after starting. Check the logs for more information.
