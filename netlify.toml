@@ -1,11 +1,10 @@
 [build]
-  # بما أن package.json في الجذر، نترك base فارغة أو "/"
   base = "/"
-
-  # أمر البناء القياسي لـ Vite
   command = "npm install && npm run build"
+  # هنا نبحث عن المجلد الذي سينتجه Vite بناءً على الإعدادات أعلاه
+  publish = "client/dist"
 
-  # المجلد الذي ينتجه Vite افتراضياً يكون في الجذر باسم dist
-  # ملاحظة: إذا كان مشروعك يعتمد على نظام Full-stack (client/server) 
-  # تأكد أن Vite يخرج ملفاته إلى dist
-  publish = "dist"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
