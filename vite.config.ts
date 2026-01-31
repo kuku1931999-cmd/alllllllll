@@ -15,10 +15,11 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "shared"),
     },
   },
+  // نقطة الانطلاق هي مجلد client
   root: path.resolve(__dirname, "client"),
   build: {
-    // تم التعديل هنا ليكون المجلد داخل المشروع مباشرة
-    outDir: path.resolve(__dirname, "dist"),
+    // سيقوم بإنشاء مجلد dist داخل مجلد client
+    outDir: "dist", 
     emptyOutDir: true,
   },
   server: {

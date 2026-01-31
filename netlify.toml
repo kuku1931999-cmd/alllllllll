@@ -1,7 +1,11 @@
 [build]
-  base = "/"
+  # اترك الـ base فارغاً لأن package.json في الجذر
+  base = ""
+  
+  # تأكد من تثبيت الحزم ثم البناء
   command = "npm install && npm run build"
-  # هنا نبحث عن المجلد الذي سينتجه Vite بناءً على الإعدادات أعلاه
+  
+  # المسار النهائي الذي سيحتوي على ملفات index.html
   publish = "client/dist"
 
 [[redirects]]
