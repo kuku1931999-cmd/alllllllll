@@ -1,7 +1,11 @@
 [build]
-  base = "."
-  command = "npm install && npx vite build --outDir client/dist"
-  publish = "client/dist"
+  # بما أن package.json في الجذر، نترك base فارغة أو "/"
+  base = "/"
 
-[build.environment]
-  NODE_VERSION = "22"
+  # أمر البناء القياسي لـ Vite
+  command = "npm install && npm run build"
+
+  # المجلد الذي ينتجه Vite افتراضياً يكون في الجذر باسم dist
+  # ملاحظة: إذا كان مشروعك يعتمد على نظام Full-stack (client/server) 
+  # تأكد أن Vite يخرج ملفاته إلى dist
+  publish = "dist"
