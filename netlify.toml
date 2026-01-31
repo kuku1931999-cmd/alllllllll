@@ -2,3 +2,6 @@
   base = "."
   command = "npm install && npx vite build --outDir client/dist"
   publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
