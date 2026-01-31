@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
 "scripts": {
-  "build": "npx vite build --outDir client/dist",
+  "build": "npx vite build",
   "dev": "vite --host",
   "preview": "vite preview",
   "serve-api": "node server/index.js",

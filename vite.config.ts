@@ -15,12 +15,12 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "shared"),
     },
   },
-  // نقطة الانطلاق هي مجلد client
   root: path.resolve(__dirname, "client"),
   build: {
-    // سيقوم بإنشاء مجلد dist داخل مجلد client
-    outDir: "dist", 
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    sourcemap: false,
+    minify: 'esbuild',
   },
   server: {
     historyApiFallback: true,
