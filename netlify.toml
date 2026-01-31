@@ -1,14 +1,18 @@
 [build]
-  # اترك الـ base فارغاً لأن package.json في الجذر
   base = ""
-  
-  # تأكد من تثبيت الحزم ثم البناء
   command = "npm install && npm run build"
-  
-  # المسار النهائي الذي سيحتوي على ملفات index.html
   publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
